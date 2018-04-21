@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista korisnika</title>
+</head>
+<body>
+	<p>Lista korisnika</p>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Username</th>
+			<th>Password</th>
+			<th>Role</th>
+		</tr>
+		<tr th:each="user : ${users}">
+			<td th:text="${user.id}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.password}"></td>
+			<td th:text="${user.role}"></td>
+		</tr>
+	</table>
+</body>
+</html>
